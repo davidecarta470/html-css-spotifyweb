@@ -145,6 +145,9 @@ filter:opacity(.5);
   margin-right:10px ;
   border :1px solid white;
   border-radius: 40px;
+  transition: transform .1s;
 }
-
+.btn:hover{
+  transform: scale(1.1);
+}
 /* body */
