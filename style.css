@@ -13,12 +13,13 @@ body{
 }
 
 
-/* inside container(aside and main) */
+/* inside CONTAINER(aside and main) */
 .aside{   
   width:15%;
-  font-size:12px;
-  background-color:red;
-  color:white;
+  font-size:10px;
+  background-color:black;
+  color:#a3a3a3;
+  padding: 20px 0px 5px 20px;
   display:flex;
   flex-direction:column;
   justify-content:space-between;
@@ -27,15 +28,15 @@ body{
   width:85%;
   height: 100vh;
 }
+/* *********************** */
 
-
-/* inside main(head and body) */
+/* inside MAIN(head and body) */
 .head{
   height:80px;
-  background-color:green;
+  background-color:#080b12;
 }
 .body{
-   background-color:hotpink;
+   background-color:#141922;
    height:calc(100vh - 160px)
 }
 /* ********** */
@@ -43,27 +44,90 @@ body{
 
 .player{
   height:80px;
-  background-color:black;
+  background-color:#282828;
 }
 
-/* Aside */
-.logo{
-  display:flex;
-  align-items:center;
-
-}
+/* ASIDE*/
+/* Aside top */
 .logo img{
-  width:35px;
-  margin: 10px 0;
-}
-.container .aside .logo div:last-child{
-  font-size:20px;
+  width:120px;
+  margin-right: 10px;
 }
 .container .aside ul li{
   display:flex;
   align-items:center;
-  margin: 5px 0;
+  margin: 10px 0;
+  line-height: 20px;
+}
+.container .aside .bottom .user:first-child,
+.container .aside ul li{
+  cursor: pointer;
+}
+.container .aside ul li:first-child span,
+.container .aside ul li h3:only-child{
+  color:white;
 }
 .container .aside ul li img{
   width: 20px;
+  margin-right: 5px;
 }
+.container .aside ul li img,
+.container .aside .bottom .user:first-child img{
+filter:opacity(.5);
+}
+.container .aside .add{
+  display:inline-block;
+  height: 30px;
+  width:30px;
+  background-color:#a3a3a3;
+  text-align:center;
+  margin-right: 10px;
+}
+.container .aside .add i{
+  font-size: 16px;
+  color:black;
+  line-height:30px;
+}
+
+/* Aside bottom */
+.container .aside .bottom .user{
+  display:flex;
+  align-items:center;
+  padding: 10px 0;
+}
+.container .aside .bottom .user:last-child{
+  border-top: 1px solid #a3a3a3;
+}
+.container .aside .bottom img{
+  width:14px;
+  margin-right: 10px;
+}
+.container .aside .bottom img[src*=profile]{
+  background-color: #a3a3a3;
+  width: 20px;
+  height: 20px;
+  border-radius:50%;
+}
+.container .aside .bottom #user-name{
+  color:white;
+  font-size: 14px;
+}
+
+
+/* aside hover */
+.container .aside .top ul li:hover,
+.container .aside .bottom .user:hover{
+  color: white;
+}
+.container .aside .top ul li:hover .add{
+  background-color:white;
+}
+
+.container .aside ul li:hover img,
+.container .aside .bottom .user:hover img{
+  filter:opacity(1);
+}
+/* ************************* */
+
+
+/* MAIN */
