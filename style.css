@@ -41,11 +41,11 @@ body{
 /* inside MAIN(head and body) */
 .head{
   height:80px;
-  background-color:#080b12;
+  background-color:rgba(1, 1, 1, .5)
 }
 .body{
    background-color:#141922;
-   height:calc(100vh - 160px);
+   height:calc(100vh - 80px);
    overflow: auto;
 }
 /* ********** */
@@ -141,13 +141,15 @@ filter:opacity(.5);
   display:flex;
   align-items:center;
   justify-content:right;
+  position: fixed;
+  width: calc(100% - 200px);
 }
 .btn{
   font-size:12px;
   color: white;
   background-color:#080b12;
   padding:10px 40px;
-  margin-right:10px ;
+  margin-right:40px ;
   border :1px solid white;
   border-radius: 40px;
   transition: transform .1s;
@@ -157,9 +159,10 @@ filter:opacity(.5);
 }
 /* body */
 .container .main .body ul{
-  text-align:center;
   font-size:10px;
+  text-align:center;
   color: #a3a3a3;
+  padding-top: 80px;
 }
 .container .main .body ul li{
   display:inline-block;
@@ -257,6 +260,7 @@ width: 100%;
   display:flex;
   justify-content:space-between;
   align-items: center;
+  z-index: 20;
 }
 /* player menu left */
 .player .menu.left{
