@@ -21,6 +21,10 @@ body{
 .container .aside ul li,.time-bar,button{
   cursor: pointer;
 }
+.aside .responsive-top,
+.aside .responsive-bottom{
+   display: none;
+}
 /* inside CONTAINER(aside and main) */
 .aside{   
   width:200px;
@@ -143,6 +147,7 @@ filter:opacity(.5);
   justify-content:right;
   position: fixed;
   width: calc(100% - 200px);
+  z-index: 40;
 }
 .btn{
   font-size:12px;
@@ -260,7 +265,6 @@ width: 100%;
   display:flex;
   justify-content:space-between;
   align-items: center;
-  z-index: 20;
 }
 /* player menu left */
 .player .menu.left{
@@ -284,9 +288,11 @@ width: 100%;
   margin-left:20px;
 }
 .player .menu.left i{
+  font-size:12px;
+  padding:0px 5px;
   filter:opacity(.5);
-  padding:0 5px;
 }
+
 .player .menu.left i:hover{
   filter: opacity(1);
   cursor: pointer;
@@ -304,14 +310,14 @@ width: 100%;
   align-items: center;
 
 }
-.player .menu.center>div:first-child{
-  width:150px;
+.player .menu.center .top{
+  width:120px;
   height: 40px;
 }
-.player .menu.center>div:first-child{
+.player .menu.center .top{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
    
 }
 .player .menu.center div:first-child i{
@@ -376,5 +382,63 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 8px;
+}
+
+
+
+
+/* RESPONSIVE */
+@media screen and (max-width:760px){
+  .container .main .body .recently-player{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 20px 0;
+  }
+  .container .main .body .recently-player .music,
+  .container .main .body .create-for .music,
+  .container .main .body .popular .music{
+    width: 23%;
+  }
+}
+
+
+
+
+@media screen and (max-width:576px){
+  .aside{
+    width: 50px;
+    padding:0;
+    padding: 15px;
+    
+  }
+  .main{
+      width:calc(100vw - 50px);
+  }
+  .container .main .head{
+    width: calc(100% - 50px);
+  }
+  .container .main .body .recently-player .music,
+  .container .main .body .create-for .music,
+  .container .main .body .popular .music{
+    width: 45%;
+  }
+  .aside .bottom,
+  .aside .top{
+    display: none;
+  }
+  .aside .responsive-top,
+  .aside .responsive-bottom{
+    display: block;
+    font-size: 20px;
+  }
+
+  .aside .responsive-top img,
+  .aside .responsive-bottom img{
+    width: 20px;
+  }
+  .aside .responsive-bottom img:last-child{
+    background-color:#a3a3a3;
+    border-radius:50%;
+  }
 }
