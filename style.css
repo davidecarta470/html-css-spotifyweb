@@ -17,6 +17,10 @@ body{
   display: table;
   clear: both;
 }
+.container .aside .bottom .user:first-child,
+.container .aside ul li,.time-bar,button{
+  cursor: pointer;
+}
 /* inside CONTAINER(aside and main) */
 .aside{   
   width:200px;
@@ -63,10 +67,6 @@ body{
   align-items:center;
   margin: 10px 0;
   line-height: 20px;
-}
-.container .aside .bottom .user:first-child,
-.container .aside ul li{
-  cursor: pointer;
 }
 .container .aside ul li:first-child span,
 .container .aside ul li h3:only-child{
@@ -251,3 +251,126 @@ width: 100%;
   transform: translate(-50%,-50%);
 }
 /* ********************** */
+.player{
+  color:white;
+  padding:0 10px;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+/* player menu left */
+.player .menu.left{
+  display:flex;
+  align-items: center;
+}
+.player .menu.left img{
+  width:30px;
+}
+.player .menu.left .in-progress{
+  margin-left: 10px;
+}
+.player .menu.left .in-progress div:first-child{
+  font-size:8px;
+}
+.player .menu.left .in-progress div:last-child{
+  font-size:6px;
+  color: #a3a3a3;
+}
+.player .menu.left i:first-of-type{
+  margin-left:20px;
+}
+.player .menu.left i{
+  filter:opacity(.5);
+  padding:0 5px;
+}
+.player .menu.left i:hover{
+  filter: opacity(1);
+  cursor: pointer;
+}
+.player .menu.left .in-progress div:last-child:hover{
+  color: white;
+  text-decoration: underline;
+  cursor:pointer;
+}
+/* player menu center */
+.player .menu.center{
+  width:30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.player .menu.center>div:first-child{
+  width:150px;
+  height: 40px;
+}
+.player .menu.center>div:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   
+}
+.player .menu.center div:first-child i{
+  font-size: 10px;
+}
+.player .menu.center div:first-child i:nth-of-type(3){
+  font-size:20px;
+}
+/* player menu center bottom */
+
+.player .menu.center .bottom{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.time-bar{
+  width: 70%;
+  border : 1px solid #a3a3a3;
+  border-radius: 2px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.player .menu.center div:nth-of-type(2) .time-passed,
+.player .menu.center div:nth-of-type(2) .total-time{
+  font-size: 8px;
+}
+.time-bar .mark ,#ball{
+  position:absolute;
+}
+.time-bar .mark{
+  width: 30%;
+  left: -1%;
+  border :1px solid rgb(218, 218, 218);
+  border-radius: 2px;
+  cursor: pointer;
+}
+#ball{
+  width: 10px;
+  height: 10px;
+  left:28%;
+  border-radius: 50%;
+  background-color: white;
+  display: none;
+}
+.time-bar:hover #ball{
+  display: block;
+}
+.time-bar:hover .mark{
+  border :1px solid rgb(48, 238, 64);
+}
+.player .menu.center div:first-child i:nth-of-type(3):hover{
+  font-size:25px;
+}
+
+
+/* menu right */
+.player .menu.right{
+  width: 120px;
+  font-size:10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
