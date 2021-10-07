@@ -63,7 +63,7 @@ body{
 
 .logo img{
   width:120px;
-  margin-right: 10px;
+  margin-bottom: 10px;
   animation: movelogo 2s;
 }
 @keyframes movelogo{
