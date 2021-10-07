@@ -565,7 +565,7 @@ filter:opacity(.5);
     background-color:#a3a3a3;
     border-radius:50%;
   }
-  /* .player{
+  .player{
     position:fixed;
     z-index: 2;
   }
@@ -578,7 +578,7 @@ filter:opacity(.5);
   }
   .player .menu.right{
     width:20%;
-  } */
+  }
  
 }  
 
