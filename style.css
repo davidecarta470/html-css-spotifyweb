@@ -48,6 +48,7 @@ body{
 .body{
    background-color:#141922;
    height:calc(100vh - 80px);
+   padding: 80px 0 0 10px;
    overflow: auto;
 }
 /* ********** */
@@ -190,15 +191,14 @@ filter:opacity(.5);
   transform: scale(1.1);
 }
 /* body */
-
 /* ul li */
 .container .main .body ul{
-  margin-top: 100px;
   color: #bdbdbd;
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap:wrap;
+  padding:20px 0;
   
   
 }
@@ -230,13 +230,13 @@ filter:opacity(.5);
 
 
 .container .main .body h4{
-  padding: 10px;
+  padding: 10px 0;
   color:white;
 }
 .container .main .body .recently-player,
 .container .main .body .create-for,
 .container .main .body .popular{
-  padding: 10px 0px 20px 10px;
+  padding: 10px 0px 20px 0px;
   display:flex;
 }
 
@@ -301,7 +301,6 @@ filter:opacity(.5);
 #aggiornamenti{
   font-size: 8px;
   color: #a3a3a3;
-  padding: 0px 15px 0px 10px;
 }
 /* ************************ */
 
