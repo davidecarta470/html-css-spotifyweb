@@ -238,23 +238,24 @@ filter:opacity(.5);
 .container .main .body .popular{
   padding: 10px 0px 20px 10px;
   display:flex;
-  gap:10px;
 }
 
 /* object */
 .container .main .body  .music{
   text-align: center;
-  margin-right: 10px;
-  width:15%;
+  width:16%;
+  padding-right:  1%;
 }
 .container .main .body  .music .layover{
+  width:100%;
   position: relative;
+  cursor: pointer;
 }
 .container .main .body  .music .layover img{
   width: 100%;
   animation: music-appear 0.2s ease 2s;
-  transition: filter 1s;
-  transition: transform 0.5s;
+  transition: all .2s;
+  
 
 }
 @keyframes music-appear{
@@ -284,7 +285,7 @@ filter:opacity(.5);
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
-  transition: font-size 0.5s;
+  transition: font-size .2s;
 }
 
 .container .main .body  .music .album{
@@ -312,15 +313,15 @@ filter:opacity(.5);
 
 
 /* layover and over */
-.container .main .body .music:hover img{
-  filter: sepia(0.8);
-  transform: scale(1.1);
+.container .main .body .layover:hover img{
+  filter: opacity(0.5);
+  transform: scale(1.05);
   box-shadow: 0 0 10px  white;
   cursor: pointer;
 }
 
 /* center play */
-.container .main .body .music:hover  i{
+.container .main .body .layover:hover  i{
   font-size: 40px;
 }
 /* ********************** */
@@ -492,7 +493,7 @@ filter:opacity(.5);
 
 
 /* medium size */
-@media screen and (max-width:992px){
+@media screen and (max-width:996px){
   .container .main .body .recently-player{
     display: flex;
     flex-wrap:wrap;
@@ -503,7 +504,11 @@ filter:opacity(.5);
   .container .main .body .recently-player .music,
   .container .main .body .create-for .music,
   .container .main .body .popular .music{
-    width: 23%;
+    width: 25%;
+    padding-right: 2%;
+  }
+  .container .main .body .recently-player .music:nth-child(5),.container .main .body .recently-player .music:nth-child(6){
+    display: none;
   }
 }
 
@@ -515,11 +520,16 @@ filter:opacity(.5);
     gap: 20px 0px;
     
   }
-
+  
   .container .main .body .recently-player .music,
   .container .main .body .create-for .music,
   .container .main .body .popular .music{
     width: 45%;
+    padding-right: 2%;
+
+  }
+  .container .main .body .recently-player .music:nth-child(3),.container .main .body .recently-player .music:nth-child(4){
+    display: none;
   }
 }
 
@@ -540,6 +550,7 @@ filter:opacity(.5);
   .container .main .body .create-for .music,
   .container .main .body .popular .music{
     width: 45%;
+    padding-right: 2%;
   }
   .aside .bottom,
   .aside .top,
@@ -547,6 +558,7 @@ filter:opacity(.5);
   .aside h3{
     display: none;
   }
+
   .aside .responsive-top,
   .aside .responsive-bottom{
     font-size: 20px;
